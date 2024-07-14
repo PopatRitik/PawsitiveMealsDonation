@@ -9,7 +9,7 @@ import nodemailer from "nodemailer";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-dotenv.config({ path: path.resolve(__dirname, '../config/.env') });
+dotenv.config();
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',

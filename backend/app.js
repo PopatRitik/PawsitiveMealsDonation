@@ -1,9 +1,10 @@
 import express from "express";
-import {config} from "dotenv";
 import router from "./routes/paymentRoutes.js";
 import cors from "cors";
+import dotenv from 'dotenv';
 
-config({path:"./config/config.env"});
+
+dotenv.config();
 
 const app=express();
 
