@@ -89,7 +89,7 @@ const paymentVerification = async (req, res) => {
         });        
 
         res.redirect(
-            `http://localhost:4000/paymentsuccess?reference=${razorpay_payment_id}`
+            `https://pawsitivemeals.onrender.com/paymentsuccess?reference=${razorpay_payment_id}`
         );
     } else {
         res.status(400).json({

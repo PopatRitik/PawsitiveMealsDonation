@@ -3,8 +3,11 @@ import Razorpay from "razorpay";
 import { connectDB } from "./config/database.js";
 import express from "express";
 import path from "path";
+import job from "./cron/cron.js"
 
 connectDB();
+
+job.start();
 
 const __dirname = path.resolve();
 
