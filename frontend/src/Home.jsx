@@ -5,9 +5,9 @@ import axios from "axios";
 
 
 const checkoutHandler = async (amount, email) => {
-     const { data: { key } } = await axios.get("http://localhost:4000/api/getkey")
+     const { data: { key } } = await axios.get("https://pawsitivemeals.onrender.com/api/getkey")
 
-     const { data: { order } } = await axios.post("http://localhost:4000/api/checkout", {
+     const { data: { order } } = await axios.post("https://pawsitivemeals.onrender.com/api/checkout", {
           amount,
           email
      })
@@ -20,7 +20,7 @@ const checkoutHandler = async (amount, email) => {
           description: "Donation for dogs",
           image: "https://static.vecteezy.com/system/resources/thumbnails/021/334/027/small/smiling-bernese-mountain-dog-avatar-tongue-hanging-out-cute-cartoon-pet-domestic-animal-vector.jpg",
           order_id: order.id,
-          callback_url: `http://localhost:4000/api/paymentVerification?email=${email}`,
+          callback_url: `https://pawsitivemeals.onrender.com/api/paymentVerification?email=${email}`,
           prefill: {
                name: "popri",
                email: email,
