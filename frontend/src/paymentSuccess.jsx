@@ -12,17 +12,17 @@ const PaymentSuccess = () => {
         console.log("Search Params:", searchParams.toString());
         console.log("Reference Number:", referenceNum);
     }, [searchParams, referenceNum]);
-    
+
     console.log(referenceNum)
     return (
         <Box bgGradient="linear(to-r, green.200, blue.200)" minHeight="100vh">
             <Container maxW="container.md" py={10}>
-                <VStack spacing={8} justify="center" minHeight="90vh">
-                    <Icon as={CheckCircleIcon} w={20} h={20} color="green.500" />
-                    <Heading textTransform="uppercase" color="green.700">
+                <VStack spacing={8} justify="center" minHeight="90vh" textAlign="center">
+                    <Icon as={CheckCircleIcon} w={{ base: 16, md: 20 }} h={{ base: 16, md: 20 }} color="green.500" />
+                    <Heading textTransform="uppercase" color="green.700" fontSize={{ base: '2xl', md: '4xl' }}>
                         Donation Successful
                     </Heading>
-                    <Text fontSize="xl" fontWeight="bold">
+                    <Text fontSize={{ base: 'lg', md: 'xl' }} fontWeight="bold">
                         Thank you for your generosity!
                     </Text>
                     <Box 
@@ -30,9 +30,10 @@ const PaymentSuccess = () => {
                         p={6} 
                         borderRadius="lg" 
                         boxShadow="md"
+                        width={{ base: 'full', md: 'auto' }}
                         textAlign="center"
                     >
-                        <Text fontSize="lg" color="green.700">
+                        <Text fontSize={{ base: 'md', md: 'lg' }} color="green.700">
                             Reference No: {referenceNum ? referenceNum : "N/A"}
                         </Text>
                     </Box>
