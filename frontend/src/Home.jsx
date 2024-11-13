@@ -23,7 +23,7 @@ const checkoutHandler = async (amount, email) => {
           callback_url: `https://pawsitivemeals.onrender.com/api/paymentVerification?email=${email}`,
           prefill: {
                name: "popri",
-               email: email,
+               email: "popri.confirmation@gmail.com",
                contact: "9999999999"
           },
           notes: {

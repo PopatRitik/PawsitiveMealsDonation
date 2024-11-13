@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "backend": "file:",
     "cors": "^2.8.5",
     "cron": "^3.1.7",
     "cross-env": "^7.0.3",
